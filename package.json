@@ -1,0 +1,14 @@
+{
+  "name": "tag-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'Add your start script here'",
+    "test": "echo 'Add your test script here'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
+
