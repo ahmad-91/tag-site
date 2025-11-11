@@ -45,7 +45,7 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-white/70 leading-relaxed mb-6 max-w-md">
+            <p className="text-white/70 font-arabicBody leading-relaxed mb-6 max-w-md">
               محفظة الخصومات الذكية التي تجمع أفضل العروض في مكان واحد. خصومات فورية، دفع سريع، وشفافية كاملة.
             </p>
             
@@ -82,7 +82,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {footerLinks.main.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-white/60 hover:text-accent-green transition-colors duration-300 text-sm flex items-center gap-2 group">
+                    <Link href={link.href} className="text-white/60 hover:text-accent-green transition-colors duration-300 text-sm font-arabicBody flex items-center gap-2 group">
                       <span className="w-1 h-1 rounded-full bg-white/40 group-hover:bg-accent-green transition-colors"></span>
                       {link.name}
                     </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {footerLinks.info.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-white/60 hover:text-accent-purple transition-colors duration-300 text-sm flex items-center gap-2 group">
+                    <Link href={link.href} className="text-white/60 hover:text-accent-purple transition-colors duration-300 text-sm font-arabicBody flex items-center gap-2 group">
                       <span className="w-1 h-1 rounded-full bg-white/40 group-hover:bg-accent-purple transition-colors"></span>
                       {link.name}
                     </Link>
@@ -112,7 +112,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-white/60 hover:text-accent-lime transition-colors duration-300 text-sm flex items-center gap-2 group">
+                    <Link href={link.href} className="text-white/60 hover:text-accent-lime transition-colors duration-300 text-sm font-arabicBody flex items-center gap-2 group">
                       <span className="w-1 h-1 rounded-full bg-white/40 group-hover:bg-accent-lime transition-colors"></span>
                       {link.name}
                     </Link>
@@ -126,19 +126,19 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/50 text-sm">
-              © 2025 <span className="font-semibold text-white/70">tag</span>. جميع الحقوق محفوظة.
+            <p className="text-white/50 text-sm font-arabicBody">
+              © 2025 <span className="font-arabicBody font-semibold text-white/70">tag</span>. جميع الحقوق محفوظة.
             </p>
             <div className="flex items-center gap-6 text-sm">
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
+              <Link href="#" className="text-white/50 hover:text-white transition-colors font-arabicBody">
                 سياسة الاستخدام
               </Link>
               <span className="text-white/20">•</span>
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
+              <Link href="#" className="text-white/50 hover:text-white transition-colors font-arabicBody">
                 الشروط والأحكام
               </Link>
               <span className="text-white/20">•</span>
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
+              <Link href="#" className="text-white/50 hover:text-white transition-colors font-arabicBody">
                 اتصل بنا
               </Link>
             </div>

@@ -16,7 +16,19 @@
   }
 
   body {
-    @apply bg-background text-text-primary;
+    @apply bg-background text-text-primary dark:bg-[#000000] dark:text-[#FFFFFF];
+  }
+  
+  /* Dark Mode Gradient Background Glow */
+  body.dark::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    background: linear-gradient(to bottom right, #8B7DFF, #C4B5FD);
+    opacity: 0.15;
+    filter: blur(120px);
+    pointer-events: none;
   }
 
   /* Smooth Scrolling for all browsers */
@@ -43,7 +55,7 @@
 
   /* Arabic Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-arabic font-black text-text-primary;
+    @apply font-arabic font-black text-text-primary dark:text-[#FFFFFF];
   }
 
   /* Responsive Typography */
@@ -118,8 +130,9 @@
   }
 
   .feature-card {
-    @apply bg-white rounded-xl p-6 shadow-md hover:shadow-lg 
-           transition-all duration-300 transform hover:-translate-y-1;
+    @apply bg-white dark:bg-[#0A0A0A] rounded-xl p-6 shadow-md dark:shadow-dark-soft hover:shadow-lg 
+           transition-all duration-300 transform hover:-translate-y-1
+           dark:border dark:border-[#1A1A1A]/50;
   }
 
   .headingL {
@@ -134,6 +147,13 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
+  
+  .text-gradient-dark {
+    background: linear-gradient(to right, #8B7DFF, #C4B5FD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   .bg-gradient-primary {
     @apply bg-gradient-to-br from-primary via-primary-dark to-primary;
@@ -141,6 +161,10 @@
 
   .bg-gradient-accent {
     @apply bg-gradient-to-br from-accent-green via-accent-lime to-accent-green;
+  }
+  
+  .bg-gradient-dark-accent {
+    background: linear-gradient(to left, #8B7DFF, #A78BFA);
   }
 }
 
@@ -421,15 +445,15 @@
 
   /* Responsive Padding */
   .padding-responsive {
-    @apply p-4 sm:p-6 lg:p-8;
+    @apply p-6 sm:p-8 lg:p-10;
   }
 
   .padding-responsive-x {
-    @apply px-4 sm:px-6 lg:px-8;
+    @apply px-6 sm:px-8 lg:px-10;
   }
 
   .padding-responsive-y {
-    @apply py-4 sm:py-6 lg:py-8;
+    @apply py-6 sm:py-8 lg:py-10;
   }
 
   /* Mobile Hidden/Show */

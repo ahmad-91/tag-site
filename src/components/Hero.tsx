@@ -64,15 +64,15 @@ export default function Hero() {
       {/* NAV - Enhanced Responsive */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'border-b border-white/60 bg-white/90 backdrop-blur-2xl shadow-lg py-2 sm:py-3' 
-          : 'border-b border-white/40 bg-white/70 backdrop-blur-2xl py-3 sm:py-4'
+          ? 'border-b border-white/60 dark:border-[#1A1A1A]/50 bg-white/90 dark:bg-[#0A0A0A]/95 backdrop-blur-2xl shadow-lg dark:shadow-dark-soft py-2 sm:py-3' 
+          : 'border-b border-white/40 dark:border-[#1A1A1A]/50 bg-white/70 dark:bg-[#0A0A0A]/90 backdrop-blur-2xl py-3 sm:py-4'
       }`}>
         <div className="section-container">
           <div className="flex items-center justify-between gap-2 sm:gap-4">
             {/* Mobile Menu Button - Left */}
             <button 
               type="button" 
-              className="rounded-xl p-2 text-primary/70 hover:text-primary md:hidden touch-manipulation active:scale-95 transition-transform" 
+              className="rounded-xl p-2 text-primary/70 dark:text-[#CFCFCF] hover:text-primary dark:hover:text-[#00D085] md:hidden touch-manipulation active:scale-95 transition-transform" 
               onClick={() => setMobileMenuOpen(true)}
               aria-label="فتح القائمة"
             >
@@ -82,16 +82,23 @@ export default function Hero() {
             {/* Logo & Navigation - Right Side */}
             <div className="flex items-center gap-4 sm:gap-6 lg:gap-8">
               <Link href="/" className="flex items-center gap-2 sm:gap-3">
-                <div className="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-xl sm:rounded-2xl border border-white/60 bg-white/70 backdrop-blur">
+                <div className="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-xl sm:rounded-2xl border border-white/60 dark:border-[#1A1A1A]/50 bg-white/70 dark:bg-[#0A0A0A]/70 backdrop-blur">
                   <Image 
                     src="/icon-black.svg" 
                     alt="tag Logo" 
                     width={28} 
                     height={28} 
-                    className="h-5 w-5 sm:h-7 sm:w-7 rounded-xl sm:rounded-2xl" 
+                    className="h-5 w-5 sm:h-7 sm:w-7 rounded-xl sm:rounded-2xl dark:hidden" 
+                  />
+                  <Image 
+                    src="/white-logo.png" 
+                    alt="tag Logo" 
+                    width={28} 
+                    height={28} 
+                    className="h-5 w-5 sm:h-7 sm:w-7 rounded-xl sm:rounded-2xl hidden dark:block" 
                   />
                 </div>
-                <span className="text-xl sm:text-2xl font-arabic font-black text-primary">tag</span>
+                <span className="text-xl sm:text-2xl font-arabic font-black text-primary dark:text-[#FFFFFF]">tag</span>
               </Link>
 
               <div className="hidden items-center gap-4 lg:gap-6 md:flex">
@@ -99,7 +106,7 @@ export default function Hero() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-xs lg:text-sm font-semiBold text-primary/70 transition-colors duration-200 hover:text-primary whitespace-nowrap"
+                    className="text-xs lg:text-sm font-arabicBody font-semiBold text-primary/70 dark:text-[#CFCFCF] transition-colors duration-200 hover:text-primary dark:hover:text-[#00D085] whitespace-nowrap"
                   >
                     {item.name}
                   </Link>
@@ -108,7 +115,7 @@ export default function Hero() {
             </div>
 
             {/* Download Button - Left */}
-            <button className="hidden md:flex group items-center gap-1.5 lg:gap-2 rounded-lg lg:rounded-xl bg-gradient-to-l from-accent-green to-accent-green-dark px-3 lg:px-5 py-2 lg:py-2.5 text-xs lg:text-sm font-bold text-white shadow-[0_12px_24px_rgba(17,129,105,0.25)] transition-transform duration-300 hover:-translate-y-0.5 touch-manipulation active:scale-95 whitespace-nowrap">
+            <button className="hidden md:flex group items-center gap-1.5 lg:gap-2 rounded-lg lg:rounded-xl bg-gradient-to-l from-[#8B7DFF] to-[#A78BFA] dark:bg-gradient-dark-accent px-3 lg:px-5 py-2 lg:py-2.5 text-xs lg:text-sm font-arabicBody font-bold text-white shadow-[0_12px_24px_rgba(139,125,255,0.35)] dark:shadow-dark-soft transition-transform duration-300 hover:-translate-y-0.5 touch-manipulation active:scale-95 whitespace-nowrap">
               حمّل التطبيق
               <span className="translate-x-1 transition-transform duration-300 group-hover:translate-x-1.5">→</span>
             </button>
@@ -129,26 +136,26 @@ export default function Hero() {
         <div className="relative z-10 mx-auto w-full max-w-7xl container-padding">
           <div className="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:gap-14 lg:grid-cols-12" dir="ltr">
             {/* النص */}
-            <div className="order-2 text-right lg:col-span-6 lg:col-start-7" dir="rtl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs font-semibold text-white/80">
+            <div className="order-1 lg:order-2 text-right lg:col-span-6 lg:col-start-7" dir="rtl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs font-arabicBody font-semibold text-white/80">
                 <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-accent-green" />
                 تمكين المدفوعات مع الخصومات 
               </div>
 
-              <h1 className="mt-5 sm:mt-7 text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] font-arabic font-black leading-[1.2] text-white">
+              <h1 className="mt-5 sm:mt-7 text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] font-arabic font-black leading-[1.2] text-white dark:text-white">
                 تاق ما يخصم {' '}
-                <span className="bg-gradient-to-l from-accent-green via-white to-white bg-clip-text text-transparent">
+                <span className="bg-gradient-to-l from-accent-green via-white to-white dark:text-gradient-dark bg-clip-text text-transparent">
                   تاق
                 </span>{' '}
                 يعزك
               </h1>
 
-              <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl font-latinBody leading-[1.7] sm:leading-[1.9] text-white/70 lg:ml-auto lg:max-w-2xl">
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl font-arabicBody leading-[1.7] sm:leading-[1.9] text-white/70 lg:ml-auto lg:max-w-2xl">
                 حل تقني مبتكر، يجعل خصمك والدفع بلحظة! ما يخليك تنتظر العروض! فعّل الباقة وراح تزيد العروض ما تنقص طول السنة.
               </p>
 
               <div className="mt-6 sm:mt-10 flex flex-col items-stretch sm:items-start gap-3 sm:gap-4 sm:flex-row sm:items-center lg:justify-start">
-                <button className="group flex items-center justify-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl bg-gradient-to-l from-accent-green to-accent-green-dark px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold text-white shadow-[0_18px_36px_rgba(17,129,105,0.32)] transition-all duration-300 hover:-translate-y-0.5 touch-manipulation active:scale-95">
+                <button className="group flex items-center justify-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl bg-gradient-to-l from-[#8B7DFF] to-[#A78BFA] dark:bg-gradient-dark-accent px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-arabicBody font-bold text-white shadow-[0_18px_36px_rgba(139,125,255,0.4)] dark:shadow-dark-soft transition-all duration-300 hover:-translate-y-0.5 touch-manipulation active:scale-95">
                   حمّل التطبيق الآن
                   <span className="translate-x-1 text-lg sm:text-xl transition-transform duration-300 group-hover:translate-x-2">→</span>
                 </button>
@@ -161,7 +168,7 @@ export default function Hero() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
-                  <p className="text-xs sm:text-sm font-medium text-white/60 leading-snug">شبكة متاجر معتمدة لدى تاق</p>
+                  <p className="text-xs sm:text-sm font-arabicBody font-medium text-white/60 leading-snug">شبكة متاجر معتمدة لدى تاق</p>
                 </div>
                 <div className="rounded-xl sm:rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:px-5 sm:py-4 text-white backdrop-blur-sm">
                   <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-accent-purple/20 mb-2 sm:mb-3">
@@ -169,7 +176,7 @@ export default function Hero() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <p className="text-xs sm:text-sm font-medium text-white/60 leading-snug">العروض تزيد ما تنقص</p>
+                  <p className="text-xs sm:text-sm font-arabicBody font-medium text-white/60 leading-snug">العروض تزيد ما تنقص</p>
                 </div>
                 <div className="rounded-xl sm:rounded-2xl border border-white/10 bg-white/5 px-4 py-3 sm:px-5 sm:py-4 text-white backdrop-blur-sm xs:col-span-2 sm:col-span-1">
                   <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-accent-lime/20 mb-2 sm:mb-3">
@@ -177,13 +184,13 @@ export default function Hero() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                     </svg>
                   </div>
-                  <p className="text-xs sm:text-sm font-medium text-white/60 leading-snug">مجموعة باقات تناسب طموحك</p>
+                  <p className="text-xs sm:text-sm font-arabicBody font-medium text-white/60 leading-snug">مجموعة باقات تناسب طموحك</p>
                 </div>
               </div>
             </div>
 
             {/* المشهد */}
-            <div className="order-1 lg:col-span-6 lg:col-start-1">
+            <div className="order-2 lg:order-1 lg:col-span-6 lg:col-start-1">
               <div className="relative mx-auto w-full max-w-[220px] xs:max-w-[240px] sm:max-w-[260px] md:max-w-[280px]">
                 {/* Glow Effect */}
                 <div className="absolute inset-0 -z-10 rounded-[60px] bg-gradient-to-br from-accent-green/35 via-transparent to-primary/35 blur-3xl" />
@@ -237,30 +244,31 @@ export default function Hero() {
             >
               <div className="fixed inset-0 bg-black/50" />
             </Transition.Child>
-            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-[#0A0A0A] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:ring-[#1A1A1A]/50">
               <div className="mb-6 flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                  <Image src="/icon-black.svg" alt="tag Logo" width={40} height={40} className="h-10 w-10 rounded-[30px]" />
-                  <span className="text-2xl font-arabic font-black text-text-primary">tag</span>
+                  <Image src="/icon-black.svg" alt="tag Logo" width={40} height={40} className="h-10 w-10 rounded-[30px] dark:hidden" />
+                  <Image src="/white-logo.png" alt="tag Logo" width={40} height={40} className="h-10 w-10 rounded-[30px] hidden dark:block" />
+                  <span className="text-2xl font-arabic font-black text-text-primary dark:text-[#FFFFFF]">tag</span>
                 </Link>
                 <button type="button" className="-m-2.5 p-2.5" onClick={() => setMobileMenuOpen(false)}>
-                  <XMarkIcon className="h-6 w-6 text-text-primary" />
+                  <XMarkIcon className="h-6 w-6 text-text-primary dark:text-[#FFFFFF]" />
                 </button>
               </div>
               <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="-my-6 divide-y divide-gray-500/10 dark:divide-[#1A1A1A]/50">
                   <div className="space-y-2 py-6">
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="block px-3 py-2 text-base font-semiBold text-text-primary transition-colors hover:text-primary"
+                        className="block px-3 py-2 text-base font-arabicBody font-semiBold text-text-primary dark:text-[#CFCFCF] transition-colors hover:text-primary dark:hover:text-[#00D085]"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
                       </Link>
                     ))}
-                    <button className="btn-primary mt-4 w-full">حمّل التطبيق</button>
+                    <button className="bg-gradient-to-l from-[#8B7DFF] to-[#A78BFA] text-white px-6 py-3 rounded-lg font-arabicBody font-semiBold shadow-[0_12px_24px_rgba(139,125,255,0.35)] hover:opacity-90 transition-all duration-300 dark:bg-gradient-dark-accent dark:shadow-dark-soft mt-4 w-full">حمّل التطبيق</button>
                   </div>
                 </div>
               </div>

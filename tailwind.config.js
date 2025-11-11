@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -65,11 +66,14 @@ module.exports = {
         sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
         md: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
         lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+        'dark-soft': '0 4px 16px 0 rgba(0, 0, 0, 0.3)',
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(to right, var(--color-primary), var(--color-secondary))',
         'gradient-accent': 'linear-gradient(to right, var(--color-accent-green), var(--color-accent-lime))',
-        'gradient-accent-purple': 'linear-gradient(to right, var(--color-accent-purple), var(--color-accent-green))',
+        'gradient-accent-purple': 'linear-gradient(to right, #8B7DFF, #C4B5FD)',
+        'gradient-dark-glow': 'linear-gradient(to bottom right, #8B7DFF, #C4B5FD)',
+        'gradient-button-purple': 'linear-gradient(to left, #8B7DFF, #A78BFA)',
       },
       spacing: {
         '18': '4.5rem',

@@ -47,13 +47,13 @@ export default function Features() {
   }
 
   return (
-    <section id="features" className="py-20 bg-background">
+    <section id="features" className="py-20 bg-background dark:bg-[#000000]">
       <div className="section-container">
         <div className="text-center mb-12">
-          <h2 className="section-title">
+          <h2 className="section-title dark:text-[#FFFFFF]">
            ايش يميزنا ؟
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle dark:text-[#CFCFCF] font-arabicBody">
             اكتشف جميع الميزات الرائعة التي يقدمها tag
           </p>
         </div>
@@ -67,10 +67,10 @@ export default function Features() {
               <div className={`text-4xl mb-4 inline-block p-3 rounded-xl ${accentClasses[feature.accentColor as keyof typeof accentClasses]} group-hover:scale-110 transition-transform duration-300`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-arabic font-black mb-3">
+              <h3 className="text-xl font-arabic font-black mb-3 dark:text-[#FFFFFF]">
                 {feature.title}
               </h3>
-              <p className="text-text-secondary mb-3">
+              <p className="text-text-secondary dark:text-[#CFCFCF] mb-3 font-arabicBody">
                 {feature.description}
               </p>
               <div className={`h-1 w-full rounded-full ${accentClasses[feature.accentColor as keyof typeof accentClasses]}`} />

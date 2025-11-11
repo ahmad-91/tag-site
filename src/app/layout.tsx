@@ -19,10 +19,15 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
 })
 
 export const metadata: Metadata = {
-  title: 'tag - تطبيق tag',
-  description: 'موقع تعريفي لتطبيق tag',
-  keywords: ['tag', 'تطبيق', 'تكنولوجيا'],
+  title: 'تطبيق تاق   | tag app',
+  description: 'تاق ما يخصملك، تاق يعزك',
+  keywords: ['tag', 'تطبيق', 'تاق' , 'محفظة تاق' , 'محفظة تاق ما يخصملك' , 'محفظة تاق يعزك' ],
   authors: [{ name: 'tag Team' }],
+  icons: {
+    icon: '/icon-black.svg',
+    shortcut: '/icon-black.svg',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -31,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl" className={`${ibmPlexSansArabic.variable} ${ibmPlexSansArabicPrimary.variable}`}>
-      <body className="font-arabicBody antialiased">
+    <html lang="ar" dir="rtl" className={`dark ${ibmPlexSansArabic.variable} ${ibmPlexSansArabicPrimary.variable}`}>
+      <body className="font-arabicBody antialiased dark">
         {children}
       </body>
     </html>

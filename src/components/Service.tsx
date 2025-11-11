@@ -39,7 +39,7 @@ export default function Service() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="service" className="relative section-spacing bg-gradient-to-b from-background via-background-alt to-background overflow-hidden">
+    <section ref={sectionRef} id="service" className="relative section-spacing bg-gradient-to-b from-background via-background-alt to-background dark:from-[#000000] dark:via-[#000000] dark:to-[#000000] overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-accent-green/5 rounded-full blur-2xl sm:blur-3xl"></div>
@@ -54,18 +54,18 @@ export default function Service() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-accent-green"></span>
             </span>
-            <span className="text-xs sm:text-sm font-semibold text-text-primary tracking-wide">محفظة الخصومات الذكية</span>
+            <span className="text-xs sm:text-sm font-semibold text-text-primary dark:text-[#FFFFFF] tracking-wide">محفظة الخصومات الذكية</span>
           </div>
 
           {/* Title */}
-          <h2 className="scroll-reveal text-responsive-3xl font-arabic font-black mb-4 sm:mb-5 lg:mb-6 leading-tight px-4">
-            ما هي خدمة <span className="text-transparent bg-clip-text bg-gradient-to-l from-accent-green via-accent-purple to-accent-lime">tag</span>؟
+          <h2 className="scroll-reveal text-responsive-3xl font-arabic font-black mb-4 sm:mb-5 lg:mb-6 leading-tight px-4 dark:text-[#FFFFFF]">
+            ما هي خدمة <span className="text-transparent bg-clip-text bg-gradient-to-l from-accent-green via-accent-purple to-accent-lime dark:text-gradient-dark">tag</span>؟
           </h2>
 
           {/* Description */}
-          <p className="scroll-reveal text-responsive-lg text-text-secondary leading-relaxed max-w-3xl mx-auto px-4">
+          <p className="scroll-reveal text-responsive-lg text-text-secondary dark:text-[#CFCFCF] leading-relaxed max-w-3xl mx-auto px-4 font-arabicBody">
             محفظة خصومات موحّدة تمنحك خصومات فورية بلا أكواد. 
-            <span className="font-semibold text-text-primary"> اشحن ، فعّل، ادفع</span> - والخصم يُحتسب تلقائيًا في خطوة واحدة!
+            <span className="font-arabicBody font-semibold text-text-primary dark:text-[#FFFFFF]"> اشحن ، فعّل، ادفع</span> - والخصم يُحتسب تلقائيًا في خطوة واحدة!
           </p>
         </div>
         
@@ -74,22 +74,22 @@ export default function Service() {
           {/* Card 1 - Green */}
           <div className="scroll-reveal-scale group relative">
             <div className="absolute inset-0 bg-gradient-to-br from-accent-green to-accent-green-dark rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"></div>
-            <div className="relative bg-white rounded-responsive-full padding-responsive shadow-responsive hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent hover:border-accent-green/30">
+            <div className="relative bg-white dark:bg-[#0A0A0A] rounded-responsive-full padding-responsive shadow-responsive dark:shadow-dark-soft hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent dark:border-[#1A1A1A]/50 hover:border-accent-green/30 dark:hover:border-[#00D085]/50">
               {/* Icon Container */}
-              <div className="relative mb-4 sm:mb-6">
+              <div className="relative mb-6 sm:mb-8">
                 <div className="absolute inset-0 bg-accent-green/20 rounded-xl sm:rounded-2xl blur-lg sm:blur-xl"></div>
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-accent-green to-accent-green-dark rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto shadow-xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                  <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-accent-green to-accent-green-dark rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto shadow-xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-xl sm:text-2xl font-arabic font-black mb-2 sm:mb-3 text-text-primary group-hover:text-accent-green transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-arabic font-black mb-3 sm:mb-4 text-text-primary dark:text-[#FFFFFF] group-hover:text-accent-green dark:group-hover:text-[#00D085] transition-colors duration-300">
                 خصومات فورية
               </h3>
-              <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+              <p className="text-base sm:text-lg text-text-secondary dark:text-[#CFCFCF] leading-relaxed font-arabicBody">
                 خصومات فورية بلا أكواد. الخصم يُحتسب تلقائيًا عند الدفع
               </p>
 
@@ -101,22 +101,22 @@ export default function Service() {
           {/* Card 2 - Purple */}
           <div className="scroll-reveal-scale group relative">
             <div className="absolute inset-0 bg-gradient-to-br from-accent-purple to-accent-purple rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"></div>
-            <div className="relative bg-white rounded-responsive-full padding-responsive shadow-responsive hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent hover:border-accent-purple/30">
+            <div className="relative bg-white dark:bg-[#0A0A0A] rounded-responsive-full padding-responsive shadow-responsive dark:shadow-dark-soft hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent dark:border-[#1A1A1A]/50 hover:border-accent-purple/30 dark:hover:border-[#00D085]/50">
               {/* Icon Container */}
-              <div className="relative mb-4 sm:mb-6">
+              <div className="relative mb-6 sm:mb-8">
                 <div className="absolute inset-0 bg-accent-purple/20 rounded-xl sm:rounded-2xl blur-lg sm:blur-xl"></div>
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-accent-purple to-accent-purple rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto shadow-xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                  <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-accent-purple to-accent-purple rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto shadow-xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-xl sm:text-2xl font-arabic font-black mb-2 sm:mb-3 text-text-primary group-hover:text-accent-purple transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-arabic font-black mb-3 sm:mb-4 text-text-primary dark:text-[#FFFFFF] group-hover:text-accent-purple dark:group-hover:text-[#00D085] transition-colors duration-300">
                 دفع سريع
               </h3>
-              <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+              <p className="text-base sm:text-lg text-text-secondary dark:text-[#CFCFCF] leading-relaxed font-arabicBody">
                 ادفع داخل التطبيق أو عبر NFC/QR في ثوانٍ بدون تعقيدات
               </p>
 
@@ -128,22 +128,22 @@ export default function Service() {
           {/* Card 3 - Lime */}
           <div className="scroll-reveal-scale group relative sm:col-span-2 lg:col-span-1">
             <div className="absolute inset-0 bg-gradient-to-br from-accent-lime to-accent-lime rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"></div>
-            <div className="relative bg-white rounded-responsive-full padding-responsive shadow-responsive hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent hover:border-accent-lime/30">
+            <div className="relative bg-white dark:bg-[#0A0A0A] rounded-responsive-full padding-responsive shadow-responsive dark:shadow-dark-soft hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent dark:border-[#1A1A1A]/50 hover:border-accent-lime/30 dark:hover:border-[#90EE26]/50">
               {/* Icon Container */}
-              <div className="relative mb-4 sm:mb-6">
+              <div className="relative mb-6 sm:mb-8">
                 <div className="absolute inset-0 bg-accent-lime/20 rounded-xl sm:rounded-2xl blur-lg sm:blur-xl"></div>
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-accent-lime to-accent-lime rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto shadow-xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                  <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-accent-lime to-accent-lime rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto shadow-xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  <svg className="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-xl sm:text-2xl font-arabic font-black mb-2 sm:mb-3 text-text-primary group-hover:text-accent-lime transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-arabic font-black mb-3 sm:mb-4 text-text-primary dark:text-[#FFFFFF] group-hover:text-accent-lime dark:group-hover:text-[#90EE26] transition-colors duration-300">
                 شفافية كاملة
               </h3>
-              <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+              <p className="text-base sm:text-lg text-text-secondary dark:text-[#CFCFCF] leading-relaxed font-arabicBody">
                 شوف السعر الأصلي، نسبة الخصم، والسعر النهائي قبل الدفع
               </p>
 

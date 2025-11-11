@@ -47,22 +47,22 @@ export default function Merchants() {
   ]
 
   return (
-    <section id="merchants" className="relative py-20 bg-gradient-to-br from-primary/5 via-accent-green/5 to-accent-purple/5 overflow-hidden">
+    <section id="merchants" className="relative py-20 bg-gradient-to-br from-primary/5 via-accent-green/5 to-accent-purple/5 dark:from-[#000000] dark:via-[#000000] dark:to-[#000000] overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent-green rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-purple rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-10 dark:opacity-20">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent-green dark:bg-[#8B7DFF] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-purple dark:bg-[#A78BFA] rounded-full blur-3xl"></div>
       </div>
 
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-arabic font-black text-primary mb-6">
+          <h2 className="text-4xl lg:text-5xl font-arabic font-black text-primary dark:text-[#FFFFFF] mb-6">
             للتجار
           </h2>
-          <p className="text-2xl lg:text-3xl font-arabic font-bold text-text-primary mb-4 leading-relaxed">
-            زود ولاء عملائك وسرع مبيعاتك، وتابع تحليلات الإيرادات
+          <p className="text-2xl lg:text-3xl font-arabic font-bold text-text-primary dark:text-[#FFFFFF] mb-4 leading-relaxed">
+            زود ولاء عملائك وسرع مبيعاتك، وتابع <span className="dark:text-gradient-dark">تحليلات الإيرادات</span>
           </p>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary dark:text-[#CFCFCF] max-w-2xl mx-auto font-arabicBody">
             انضم إلى منصة tag وقدم لعملائك تجربة دفع فريدة مع خصومات تلقائية وتحليلات شاملة
           </p>
         </div>
@@ -71,29 +71,29 @@ export default function Merchants() {
           {merchantBenefits.map((benefit, index) => (
             <div
               key={index}
-              className={`feature-card text-center border-2 ${benefit.borderColor} ${benefit.hoverBorder} ${benefit.hoverBg} transition-all duration-300 bg-white/90 backdrop-blur-sm relative overflow-hidden group`}
+              className={`feature-card text-center border-2 ${benefit.borderColor} ${benefit.hoverBorder} ${benefit.hoverBg} dark:bg-[#0A0A0A] dark:border-[#8B7DFF]/40 dark:hover:border-[#8B7DFF]/70 dark:shadow-dark-soft transition-all duration-300 bg-white/90 backdrop-blur-sm relative overflow-hidden group`}
             >
               {/* Gradient Accent on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
               
               <div className="relative z-10">
-                <div className={`w-20 h-20 bg-gradient-to-br ${benefit.gradient} rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-20 h-20 bg-gradient-to-br ${benefit.gradient} dark:from-[#8B7DFF] dark:to-[#A78BFA] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg dark:shadow-[0_8px_24px_rgba(139,125,255,0.4)] transform group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {benefit.icon}
                   </div>
                 </div>
                 
-                <h3 className={`text-xl font-arabic font-black mb-4 ${benefit.textColor} group-hover:scale-105 transition-transform duration-300`}>
+                <h3 className={`text-xl font-arabic font-black mb-4 ${benefit.textColor} dark:text-[#C4B5FD] group-hover:scale-105 transition-transform duration-300`}>
                   {benefit.title}
                 </h3>
                 
-                <p className="text-text-secondary leading-relaxed">
+                <p className="text-text-secondary dark:text-[#CFCFCF] leading-relaxed font-arabicBody">
                   {benefit.description}
                 </p>
               </div>
 
               {/* Decorative Corner Element */}
-              <div className={`absolute top-0 right-0 w-16 h-16 bg-gradient-to-br ${benefit.gradient} opacity-10 rounded-bl-full`}></div>
+              <div className={`absolute top-0 right-0 w-16 h-16 bg-gradient-to-br ${benefit.gradient} dark:from-[#8B7DFF] dark:to-[#A78BFA] opacity-10 rounded-bl-full`}></div>
             </div>
           ))}
         </div>
@@ -101,10 +101,10 @@ export default function Merchants() {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="bg-gradient-to-r from-accent-green to-accent-green-dark text-white hover:shadow-xl px-8 py-4 rounded-xl font-arabic font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
+            <button className="bg-gradient-to-l from-[#8B7DFF] to-[#A78BFA] text-white hover:shadow-xl px-8 py-4 rounded-xl font-arabic font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_12px_24px_rgba(139,125,255,0.35)]">
               انضم كتاجر
             </button>
-            <button className="border-2 border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-white px-8 py-4 rounded-xl font-arabic font-bold text-lg transition-all duration-300 transform hover:-translate-y-1">
+            <button className="border-2 border-accent-purple dark:border-[#8B7DFF] text-accent-purple dark:text-[#C4B5FD] hover:bg-accent-purple dark:hover:bg-gradient-to-l dark:hover:from-[#8B7DFF] dark:hover:to-[#A78BFA] hover:text-white px-8 py-4 rounded-xl font-arabic font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 dark:shadow-[0_8px_20px_rgba(139,125,255,0.25)]">
               تواصل معنا
             </button>
           </div>

@@ -35,7 +35,7 @@ export default function Download() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="download" className="relative py-24 bg-gradient-to-b from-background via-background-alt to-background overflow-hidden">
+    <section ref={sectionRef} id="download" className="relative py-24 bg-gradient-to-b from-background via-background-alt to-background dark:from-[#000000] dark:via-[#000000] dark:to-[#000000] overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-96 h-96 bg-accent-green/5 rounded-full blur-3xl"></div>
@@ -50,14 +50,14 @@ export default function Download() {
               <svg className="w-4 h-4 text-accent-green" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
               </svg>
-              <span className="text-sm font-semibold text-text-primary tracking-wide">ابدأ الآن</span>
+              <span className="text-sm font-arabicBody font-semibold text-text-primary dark:text-[#FFFFFF] tracking-wide">ابدأ الآن</span>
             </div>
 
-            <h2 className="scroll-reveal text-4xl md:text-5xl lg:text-6xl font-arabic font-black mb-6 leading-tight">
-              حمّل تطبيق <span className="text-transparent bg-clip-text bg-gradient-to-l from-accent-green via-accent-purple to-accent-lime">tag</span> الآن
+            <h2 className="scroll-reveal text-4xl md:text-5xl lg:text-6xl font-arabic font-black mb-6 leading-tight dark:text-[#FFFFFF]">
+              حمّل تطبيق <span className="text-transparent bg-clip-text bg-gradient-to-l from-accent-green via-accent-purple to-accent-lime dark:text-gradient-dark">tag</span> الآن
             </h2>
             
-            <p className="scroll-reveal text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
+            <p className="scroll-reveal text-lg md:text-xl text-text-secondary dark:text-[#CFCFCF] leading-relaxed max-w-3xl mx-auto font-arabicBody">
               ابدأ رحلتك مع الخصومات الذكية. حمّل التطبيق واستمتع بعروض حصرية من أول يوم!
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Download() {
             {/* App Store */}
             <a
               href="#"
-              className="scroll-reveal-left group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-gray-50 p-8 border-2 border-gray-100 hover:border-accent-green/30 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl"
+              className="scroll-reveal-left group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-gray-50 dark:from-[#0A0A0A] dark:to-[#0A0A0A] p-8 border-2 border-gray-100 dark:border-[#1A1A1A]/50 hover:border-accent-green/30 dark:hover:border-[#00D085]/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl dark:shadow-dark-soft"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -81,9 +81,9 @@ export default function Download() {
                 
                 {/* Text */}
                 <div className="flex-1 text-right">
-                  <p className="text-sm text-text-secondary mb-1">متوفر على</p>
-                  <p className="text-2xl font-black text-text-primary group-hover:text-accent-green transition-colors duration-300">App Store</p>
-                  <p className="text-xs text-text-secondary mt-1">لأجهزة iPhone و iPad</p>
+                  <p className="text-sm font-arabicBody text-text-secondary mb-1">متوفر على</p>
+                  <p className="text-2xl font-black text-text-primary dark:text-[#FFFFFF] group-hover:text-accent-green dark:group-hover:text-[#00D085] transition-colors duration-300">App Store</p>
+                  <p className="text-xs font-arabicBody text-text-secondary mt-1">لأجهزة iPhone و iPad</p>
                 </div>
 
                 {/* Arrow */}
@@ -98,7 +98,7 @@ export default function Download() {
             {/* Google Play */}
             <a
               href="#"
-              className="scroll-reveal-right group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-gray-50 p-8 border-2 border-gray-100 hover:border-accent-purple/30 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl"
+              className="scroll-reveal-right group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-gray-50 dark:from-[#0A0A0A] dark:to-[#0A0A0A] p-8 border-2 border-gray-100 dark:border-[#1A1A1A]/50 hover:border-accent-purple/30 dark:hover:border-[#90EE26]/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl dark:shadow-dark-soft"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -112,9 +112,9 @@ export default function Download() {
                 
                 {/* Text */}
                 <div className="flex-1 text-right">
-                  <p className="text-sm text-text-secondary mb-1">متوفر على</p>
-                  <p className="text-2xl font-black text-text-primary group-hover:text-accent-purple transition-colors duration-300">Google Play</p>
-                  <p className="text-xs text-text-secondary mt-1">لأجهزة Android</p>
+                  <p className="text-sm font-arabicBody text-text-secondary mb-1">متوفر على</p>
+                  <p className="text-2xl font-black text-text-primary dark:text-[#FFFFFF] group-hover:text-accent-purple dark:group-hover:text-[#90EE26] transition-colors duration-300">Google Play</p>
+                  <p className="text-xs font-arabicBody text-text-secondary mt-1">لأجهزة Android</p>
                 </div>
 
                 {/* Arrow */}
@@ -135,7 +135,7 @@ export default function Download() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <p className="text-sm font-semibold text-text-primary">آمن ومحمي</p>
+              <p className="text-sm font-arabicBody font-semibold text-text-primary dark:text-[#FFFFFF]">آمن ومحمي</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-accent-purple/10 rounded-xl flex items-center justify-center mx-auto mb-3">
@@ -143,7 +143,7 @@ export default function Download() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <p className="text-sm font-semibold text-text-primary">سريع وسهل</p>
+              <p className="text-sm font-arabicBody font-semibold text-text-primary dark:text-[#FFFFFF]">سريع وسهل</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-accent-lime/10 rounded-xl flex items-center justify-center mx-auto mb-3">
@@ -151,7 +151,7 @@ export default function Download() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <p className="text-sm font-semibold text-text-primary">خصومات فورية</p>
+              <p className="text-sm font-arabicBody font-semibold text-text-primary dark:text-[#FFFFFF]">خصومات فورية</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-accent-green/10 rounded-xl flex items-center justify-center mx-auto mb-3">
@@ -159,7 +159,7 @@ export default function Download() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <p className="text-sm font-semibold text-text-primary">دعم 24/7</p>
+              <p className="text-sm font-arabicBody font-semibold text-text-primary dark:text-[#FFFFFF]">دعم 24/7</p>
             </div>
           </div>
         </div>

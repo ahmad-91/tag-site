@@ -32,14 +32,14 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-background-alt to-background">
+    <section id="faq" className="py-20 bg-gradient-to-b from-background-alt to-background dark:from-[#000000] dark:to-[#000000]">
       <div className="section-container">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="section-title">
+            <h2 className="section-title dark:text-[#FFFFFF]">
               أسئلة ممكن تيجي في بالك
             </h2>
-            <p className="section-subtitle">
+            <p className="section-subtitle dark:text-[#CFCFCF] font-arabicBody">
               إجابات على الأسئلة الأكثر شيوعاً
             </p>
           </div>
@@ -49,15 +49,15 @@ export default function FAQ() {
               <Disclosure key={index}>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex w-full justify-between items-center rounded-lg bg-white px-6 py-4 text-right shadow-md hover:shadow-lg transition-all border-r-4 border-accent-green hover:border-accent-green-dark">
-                      <span className="text-lg font-arabic font-semiBold text-text-primary">
+                    <Disclosure.Button className="flex w-full justify-between items-center rounded-lg bg-white dark:bg-[#0A0A0A] px-6 py-4 text-right shadow-md dark:shadow-dark-soft hover:shadow-lg transition-all border-r-4 border-accent-green dark:border-[#00D085] hover:border-accent-green-dark dark:hover:border-[#00D085]">
+                      <span className="text-lg font-arabic font-semiBold text-text-primary dark:text-[#FFFFFF]">
                         {faq.question}
                       </span>
                       <ChevronUpIcon
-                        className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-accent-green transition-transform`}
+                        className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-accent-green dark:text-[#00D085] transition-transform`}
                       />
                     </Disclosure.Button>
-                    <Disclosure.Panel className="px-6 py-4 bg-gradient-to-r from-accent-green/5 to-transparent rounded-b-lg text-text-secondary leading-relaxed border-r-4 border-accent-green/30">
+                    <Disclosure.Panel className="px-6 py-4 bg-gradient-to-r from-accent-green/5 to-transparent dark:from-[#00D085]/10 dark:to-transparent rounded-b-lg text-text-secondary dark:text-[#CFCFCF] leading-relaxed border-r-4 border-accent-green/30 dark:border-[#00D085]/30 font-arabicBody">
                       {faq.answer}
                     </Disclosure.Panel>
                   </>
