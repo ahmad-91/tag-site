@@ -1,0 +1,251 @@
+/**
+ * Theme CSS - مشروع tag
+ * يحتوي على الألوان والخطوط المستخرجة من الهوية البصرية
+ * 
+ * آخر تحديث: 2025-01-XX
+ */
+
+:root {
+  /* ============================================
+     الألوان (Colors)
+     ============================================
+     ملاحظة: استخرج الألوان من Color-pallete.png
+     ============================================ */
+  
+  /* الألوان الأساسية - الأسود والأبيض كألوان رئيسية */
+  --color-primary: #000000; /* أسود - اللون الأساسي */
+  --color-secondary: #FFFFFF; /* أبيض - اللون الثانوي */
+  --color-primary-dark: #000000; /* أسود داكن */
+  --color-primary-light: #1A1A1A; /* أسود فاتح */
+  
+  /* ألوان التطعيمات (Accents) */
+  --color-accent-green: #00D085; /* RGB: 0, 208, 133 - أخضر */
+  --color-accent-lime: #90EE26; /* RGB: 144, 238, 38 - ليموني */
+  --color-accent-purple: #A298FB; /* RGB: 162, 152, 251 - بنفسجي */
+  --color-accent-green-light: #00E699; /* أخضر فاتح */
+  --color-accent-green-dark: #00B870; /* أخضر داكن */
+  
+  /* ألوان النصوص */
+  --color-text-primary: #000000; /* أسود للنصوص الرئيسية */
+  --color-text-secondary: #6B7280; /* رمادي للنصوص الثانوية */
+  --color-text-muted: #9CA3AF; /* رمادي فاتح للنصوص الخافتة */
+  --color-text-white: #FFFFFF; /* أبيض للنصوص على خلفيات داكنة */
+  
+  /* ألوان الخلفيات */
+  --color-background: #FFFFFF; /* خلفية بيضاء */
+  --color-background-alt: #F9FAFB; /* خلفية بديلة فاتحة */
+  --color-background-dark: #000000; /* خلفية سوداء */
+  --color-background-gray: #1A1A1A; /* خلفية رمادية داكنة */
+  
+  /* ألوان الحالات */
+  --color-success: #00D085; /* أخضر للنجاح */
+  --color-error: #EF4444; /* أحمر للأخطاء */
+  --color-warning: #F59E0B; /* برتقالي للتحذير */
+  --color-info: #A298FB; /* بنفسجي للمعلومات */
+  
+  /* ============================================
+     الخطوط (Fonts)
+     ============================================
+     تم استخراجها من identity-profile.pdf
+     ============================================ */
+  
+  /* الخطوط العربية - Graphik Arabic Family */
+  /* ملاحظة: Graphik Arabic غير متوفر على Google Fonts، سنستخدم Cairo كبديل */
+  --font-arabic-heading: 'IBM Plex Sans Arabic', sans-serif;
+  --font-arabic-body: 'IBM Plex Sans Arabic', sans-serif;
+  
+  /* الخطوط الإنجليزية */
+  --font-latin-heading: 'IBM Plex Sans Arabic', sans-serif;
+  --font-latin-body: 'IBM Plex Sans Arabic', sans-serif;
+  
+  /* أوزان الخطوط */
+  --font-weight-black: 700; /* IBM Plex Sans Arabic Bold */
+  --font-weight-extra-bold: 600;
+  --font-weight-semi-bold: 500;
+  --font-weight-regular: 400;
+  
+  /* أحجام الخطوط */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  /* ============================================
+     المسافات (Spacing)
+     ============================================ */
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* ============================================
+     الحدود (Borders)
+     ============================================ */
+  
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-full: 9999px;
+  
+  /* ============================================
+     الظلال (Shadows)
+     ============================================ */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   قاعدة الخطوط الأساسية
+   ============================================ */
+
+body {
+  font-family: var(--font-arabic-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+/* ============================================
+   العناوين (Headings)
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-arabic-heading);
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+/* العناوين الإنجليزية */
+h1[lang="en"],
+h2[lang="en"],
+h3[lang="en"] {
+  font-family: var(--font-latin-heading);
+  font-weight: var(--font-weight-extra-bold);
+}
+
+/* ============================================
+   النصوص (Text)
+   ============================================ */
+
+p, span, div {
+  font-family: var(--font-arabic-body);
+  font-weight: var(--font-weight-regular);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* النصوص الإنجليزية */
+p[lang="en"],
+span[lang="en"],
+div[lang="en"] {
+  font-family: var(--font-latin-body);
+}
+
+/* ============================================
+   الأزرار (Buttons)
+   ============================================ */
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-family: var(--font-arabic-body);
+  font-weight: var(--font-weight-semi-bold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   الروابط (Links)
+   ============================================ */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* ============================================
+   الألوان المساعدة (Utility Classes)
+   ============================================ */
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+/* ============================================
+   الحالات (States)
+   ============================================ */
+
+.success {
+  color: var(--color-success);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.info {
+  color: var(--color-info);
+}
+

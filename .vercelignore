@@ -1,0 +1,17 @@
+# Documentation & Knowledge Base
+knowledgBaseOnly/
+
+# Node modules (handled by Vercel)
+node_modules/
+
+# Development files
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Environment files
+.env*.local
+
